@@ -1,0 +1,67 @@
+ @(contacts1: List[models.Contact1])
+
+@main("details") {
+<div class="container">
+	@if(flash.containsKey("Success")){
+	<div class="alert alert-success">
+            @flash.get("success")
+        </div>
+	}
+	<head>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(53.283734599999995,-6.424593700000001),
+    zoom:14,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+	<table class="table table-bordered table-hover table-condensed">
+		<thead>
+		<!-- The header row-->
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Name</th>
+			<th>Phone Number</th>
+			<th>Town</th>
+			<th>Country</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		@for(c <- contacts1) {
+		<tr>
+			<td>@c.id</td>
+			<td>@c.email</td>
+			<td>@c.name</td>
+			<td>@c.phoneNumber</td>
+			<td>@c.town</td>
+			<td>@c.country</td>
+			<!-- Edit product button -->
+			
+		</tr>
+		}
+		</tbody>
+	</table>
+
+	<div>
+		<a href="@routes.ApplicationContact.addContact()">
+			<button class="btn btn-primary">Contact Us</button>
+		</a>
+	</div>
+
+	<h1>Location</h1>
+
+    <body>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
+</div><br>
+
+
+}

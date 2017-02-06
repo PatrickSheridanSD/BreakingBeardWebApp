@@ -1,0 +1,31 @@
+#Container
+{
+	border: 0px; /*Set the border to zero since it is currently at 1 */
+    padding: 0px;
+    width: 100%;
+}
+
+header {
+	
+	border: 0px;
+}
+
+header p{
+	
+	text-align:left;
+	color: black;
+}
+
+nav{
+	display: none;	
+}
+
+aside {
+	display: none;       
+}
+
+footer{
+	 display: none;
+}
+
+

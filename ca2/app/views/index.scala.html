@@ -1,0 +1,85 @@
+
+
+@main("Home") {
+
+<!-- Carousel -->
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="@routes.Assets.versioned("images/car1.jpg")" alt="First slide">
+                     <div class="container">
+                    <div class="carousel-caption">
+                        <h1>The Breaking Beard Company</h1>
+                        <p><a class="btn btn-lg btn-primary" href="@routes.Application.shop()" role="button">Shop Online</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="@routes.Assets.versioned("images/car2.jpg")" alt="Second slide">
+                     <div class="container">
+                    <div class="carousel-caption">
+                        <h1>The Breaking Beard Company</h1>
+                        <p><a class="btn btn-lg btn-primary" href="@routes.Application.products1()" role="button">Scents</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="third-slide" src="@routes.Assets.versioned("images/car3r.jpg")" alt="Third slide">
+                     <div class="container">
+                    <div class="carousel-caption">
+                        <h1>The Breaking Beard Company</h1>
+                        <p><a class="btn btn-lg btn-primary" href="@routes.Application.about()" role="button">About</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div><!-- /.carousel -->
+
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-circle" src="@routes.Assets.versioned("images/balm.jpg")" alt="Breaking Beard Balm" width="140" height="140">
+                     <h2>Breaking Beard Balm</h2>
+                <p>The Breaking Beard Companies beard balm is the best beard balm on the market. It contain's Shea butter to moisturize the skin underneath your beard, natural beeswax to control and the best oils to condition!!</p>
+
+                <p><a class="btn btn-primary" href="@routes.Application.products1()" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="@routes.Assets.versioned("images/oil.jpg")" alt="Breaking Beard oil" width="140" height="140">
+                     <h2>Breaking Beard Oil</h2>
+                <p>This Oil is a must for all bearded gentlemen. Mixed with only the best of oils including Jajoba and Sweet Almond it will leave your beard feeling soft and subtle. With 3 unforgettable manly scents to keep your beard perfect!! </p>
+                <p><a class="btn btn-primary" href="@routes.Application.products1()" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="@routes.Assets.versioned("images/soap.jpg")" alt="Breaking Beard Soap" width="140" height="140">
+                     <h2>Breaking Beard Soap</h2>
+                <p>This is the only shampoo or conditioner you will need to get your beard clean and soft before using The Breaking Beard Companies Beard Balm and Beard Oil. Not only cleaning your beard but making sure your skin is healthy!!</p>
+                <p><a class="btn btn-primary" href="@routes.Application.products1()" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+    </div>
+</div><br><br>
+
+
+<!-- /END THE FEATURETTES -->
+
+}

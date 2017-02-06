@@ -1,0 +1,71 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html lang="en" id="@title">
+    <head>
+        <title>The Breaking Beard Company - @title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+              <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        <link rel="stylesheet" 
+              href="@routes.Assets.versioned("assets/bootstrap/css/bootstrap.css")">
+        <script type='text/javascript' 
+        src='@routes.Assets.versioned("assets/bootstrap/js/bootstrap.js")'></script>
+    </head>
+    <body>
+        <div class="navbar-wrapper">
+            <div class="container">
+
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Breaking Beard Co.</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="@routes.Application.index()">Home</a></li>
+                                <li><a href="@routes.Application.products1()">Products</a></li>
+                                <li><a href="@routes.Application.about()">About</a></li>
+                                <li><a href="@routes.Application.shop()">Shop</a></li>
+								<li><a href="@routes.Application.stock()">Stock managenent</a></li>
+								<li><a href="@routes.ApplicationContact.details()">Contact Us</a></li>
+						    </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+						
+            <div class="content">
+                @content
+            </div>
+			
+			
+
+            <div class="container-fluid text-center">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2016 The Breaking Beard Company, Inc. </p>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+        <script src="../../assets/js/vendor/holder.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+@(id: Long, updateProductForm: Form[models.Product])
+<!-- Product id and editProductForm parameters defined above
+ passed to this view by the controller -->
+
+<!-- a 'helper' will be used to create the form dynamically, 
+though a static HTML form would also work -->
+@import helper._
+
+<!-- The page will be based on the main template -->
+@main("Update Product") {
+<div class="container">
+
+	<h3>Update Product</h3>
+	
+	<!-- Use the views.html.helpers package to create the form -->
+	@form(action = routes.Application.updateProductSubmit(id)) {
+		
+		<!-- Build the form, adding an input for each field -->
+		<!-- Note the label parameter -->
+		@inputText(updateProductForm("name"), '_label -> "Name",'class -> "form-control")
+		@inputText(updateProductForm("description"), '_label -> "Description",'class -> "form-control")
+		@inputText(updateProductForm("category"), '_label -> "Category",'class -> "form-control")
+		@inputText(updateProductForm("stock"), '_label -> "Stock",'class -> "form-control")
+		@inputText(updateProductForm("price"), '_label -> "Price",'class -> "form-control")
+
+	<!-- Add a submit button -->
+  <div class="actions">
+      <input type="submit" value="Save" class="btn btn-primary">
+			<a href="@routes.Application.stock()" 
+				<button class="btn btn-warning" href="@routes.Application.stock"()>Cancel</button>
+			</a>
+  </div>
+	} <!-- End Form definition -->
+
+} <!-- End of page content -->
+</div>

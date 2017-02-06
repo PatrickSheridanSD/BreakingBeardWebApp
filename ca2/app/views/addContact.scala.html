@@ -1,0 +1,32 @@
+@(addContactForm: Form[models.Contact1])
+
+
+@import helper._
+
+
+@main("New Contact") {
+<div class="container">
+<h2>Contact Us</h2>
+
+@form(action = routes.ApplicationContact.addContactSubmit(), 'class -> "form-horizontal", 'role->"form") {
+
+@inputText(addContactForm("email"), '_label -> "Email",'class -> "form-control")
+@inputText(addContactForm("name"), '_label -> "Name",'class -> "form-control")
+@inputText(addContactForm("phoneNumber"), '_label -> "Phone number",'class -> "form-control")
+@inputText(addContactForm("town"), '_label -> "Town",'class -> "form-control")
+@inputText(addContactForm("country"), '_label -> "Country",'class -> "form-control")
+
+		<div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+
+	<div class="actions">
+		<input type="submit" value="Submit" class="btn btn-primary">
+		<a href="@routes.ApplicationContact.details()">
+		<a button class="btn btn-warning" href="@routes.ApplicationContact.details()">Cancel</button>
+		</a>
+	</div>
+</div>
+}
+}
